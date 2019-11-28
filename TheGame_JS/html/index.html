@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Quintis</title>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css"/>
+</head>
+<body>
+    <div id="head">
+            <img src="../assets/img/trix.png" alt="img">
+            <h1>Quintis game</h1>
+            
+    </div>
+    <div id="main">        
+        <button onclick="start.show()">Start the game</button>
+        <button onclick="start.newGame()">Start the new game</button>
+        <div id="selectL" style="display: none">
+            <p id="stat">Seleziona la classe</p>
+            <ul id="list">
+                <li id="Master" onclick="start.controller.setChamp('Master')"><b>Master</b>, Masterchef: effettua 3 mosse consecutive;</li>
+                <li id="FatBoy" onclick="start.controller.setChamp('FatBoy')"><b>FatBoy</b>, Eat the world: effettua 2 mosse e in seguito mangia una pedina;</li>
+                <li id="RussiaBoy" onclick="start.controller.setChamp('RussiaBoy')"><b>RussiaBoy</b>, Comunism: effettua 2 mosse e converte un'altra pedina casuale;</li>
+                <li id="ItalianBoy" onclick="start.controller.setChamp('ItalianBoy')"><b>ItalianBoy</b>, Burocracy: effettua 2 sinistri casuali e 1 mossa normale;</li>
+            </ul>
+        </div>
+
+    <div id="table" style="display: none">
+        <br></br>
+        <button id="swp" onclick="start.controller.swapPl()">Giocatore 1: default</button>
+        <p id="Mossa">Mossa: 0</p>
+        <br></br>
+        <table style="text-align: center">
+            <tr><td id="0" onclick="start.controller.changes('0',0,0)" width="50px">-</td><td id="1" onclick="start.controller.changes('1',0,1)" width="50px">-</td><td id="2" onclick="start.controller.changes('2',0,2)" width="50px">-</td><td id="3" onclick="start.controller.changes('3',0,3)" width="50px">-</td><td id="4" onclick="start.controller.changes('4',0,4)" width="50px">-</td></tr>
+            <tr><td id="5" onclick="start.controller.changes('5',1,0)" width="50px">-</td><td id="6" onclick="start.controller.changes('6',1,1)" width="50px">-</td><td id="7" onclick="start.controller.changes('7',1,2)" width="50px">-</td><td id="8" onclick="start.controller.changes('8',1,3)" width="50px">-</td><td id="9" onclick="start.controller.changes('9',1,4)" width="50px">-</td></tr>
+            <tr><td id="10" onclick="start.controller.changes('10',2,0)" width="50px">-</td><td id="11" onclick="start.controller.changes('11',2,1)" width="50px">-</td><td id="12" onclick="start.controller.changes('12',2,2)" width="50px">-</td><td id="13" onclick="start.controller.changes('13',2,3)" width="50px">-</td><td id="14" onclick="start.controller.changes('14',2,4)" width="50px">-</td></tr>
+            <tr><td id="15" onclick="start.controller.changes('15',3,0)" width="50px">-</td><td id="16" onclick="start.controller.changes('16',3,1)" width="50px">-</td><td id="17" onclick="start.controller.changes('17',3,2)" width="50px">-</td><td id="18" onclick="start.controller.changes('18',3,3)" width="50px">-</td><td id="19" onclick="start.controller.changes('19',3,4)" width="50px">-</td></tr>
+            <tr><td id="20" onclick="start.controller.changes('20',4,0)" width="50px">-</td><td id="21" onclick="start.controller.changes('21',4,1)" width="50px">-</td><td id="22" onclick="start.controller.changes('22',4,2)" width="50px">-</td><td id="23" onclick="start.controller.changes('23',4,3)" width="50px">-</td><td id="25" onclick="start.controller.changes('25',4,4)" width="50px">-</td></tr>
+        </table>
+    </div>
+</div>
+<div id="footer">
+    <img id="sync" src="../assets/img/logo_synclab.png" ali="logo">
+    <p>Powered by NiceBoy</p>
+</div>
+    <script type="text/javascript" src="../javaScript/main.js"></script>
+    <script type="text/javascript" src="../javaScript/controller/controller.js"></script>
+    <script type="text/javascript" src="../javaScript/gamer/gamer.js"></script>
+    <script type="text/javascript" src="../javaScript/gamer/strategyGamer.js"></script>
+    <script type="text/javascript" src="../javaScript/gamer/gamerType/Master.js"></script>
+    <script type="text/javascript" src="../javaScript/gamer/gamerType/RussiaBoy.js"></script>
+    <script type="text/javascript" src="../javaScript/gamer/gamerType/FatBoy.js"></script>
+    <script type="text/javascript" src="../javaScript/gamer/gamerType/defaultt.js"></script>
+    <script type="text/javascript" src="../javaScript/gamer/gamerType/ItalianBoy.js"></script>
+    <script>
+        var start = new gameStart();
+    </script>
+</body>
+</html>
+
